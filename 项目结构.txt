@@ -1,0 +1,24 @@
+sports_meet/
+├── main.py                    # 程序入口
+├── requirements.txt
+├── app/                       # 业务逻辑层（无界面，可单独测试）
+│   ├── __init__.py
+│   ├── config.py              # 配置/路径/JSON 读写/模板目录
+│   ├── data_models.py         # Record/EventItem/ClassInfo/AppState（含自动持久化）
+│   ├── recognizer.py          # 智能识别：项目/班级/姓名/性别 + 置信评分
+│   ├── importer.py            # Excel/CSV 读取、字段映射、一人多项目拆行
+│   ├── schedule.py            # 赛程排序、上移下移、冲突检测
+│   └── docgen.py              # Word 秩序册生成
+├── ui/                        # 界面层
+│   ├── __init__.py
+│   ├── widgets.py             # 通用表格/颜色工具
+│   ├── main_window.py         # 主窗口：左导航 + 右内容区
+│   ├── import_page.py         # 数据导入页
+│   ├── project_page.py        # 项目管理页
+│   ├── class_page.py          # 班级管理页
+│   ├── schedule_page.py       # 赛程管理页
+│   ├── review_page.py         # 人工审查页
+│   ├── generate_page.py       # 生成秩序册页
+│   └── settings_page.py       # 设置页
+├── data/                      # 运行时自动生成：state.json / settings.json
+└── templates/                 # Word 模板目录（可扩展）
