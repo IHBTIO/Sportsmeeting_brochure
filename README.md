@@ -28,7 +28,7 @@ Python 3.9+，Windows / macOS / Linux
 ## 安装
 
 bash
-git clone <你的仓库地址>
+git clone https://github.com/IHBTIO/Sportsmeeting_brochure
 cd sport-meet
 pip install -r requirements.txt
 

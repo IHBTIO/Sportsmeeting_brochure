@@ -8,6 +8,7 @@ from PySide6.QtWidgets import (QCheckBox, QComboBox, QFileDialog, QFormLayout,
 
 from app import config, module_flags
 from app.version import APP_VERSION, AUTHOR, GITHUB, DESCRIPTION
+from PySide6.QtCore import Qt
 
 
 class SettingsPage(QWidget):
@@ -106,8 +107,7 @@ class SettingsPage(QWidget):
         form3.addRow("简介：", QLabel(DESCRIPTION))
         link_row = QHBoxLayout()
         lbl_link = QLabel(GITHUB or "（待开源，见代码 app/version.py）")
-        lbl_link.setTextInteractionFlags(
-            __import__("PySide6.QtCore", fromlist=["Qt"]).TextSelectableByMouse)
+        lbl_link.setTextInteractionFlags(Qt.TextSelectableByMouse)
         lbl_link.setWordWrap(True)
         link_row.addWidget(lbl_link, 1)
         if GITHUB:

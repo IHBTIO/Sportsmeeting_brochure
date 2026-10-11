@@ -8,7 +8,7 @@
 
 APP_VERSION = "2.6.0"
 AUTHOR = "hbhbhbhbhvb"
-GITHUB = ""   # 开源后填你的仓库地址，如 "https://github.com/hbhbhbhbhvb/sport-meet"
+GITHUB = "https://github.com/IHBTIO/Sportsmeeting_brochure"   # 开源后填你的仓库地址，如 "https://github.com/hbhbhbhbhvb/sport-meet"
 DESCRIPTION = "学校运动会秩序册自动生成工具（报名表导入 -> 智能识别 -> 冲突检查 -> Word 秩序册）"
 
 
